@@ -11,14 +11,14 @@ active_sub_menu_id: site_mnu_docs_tutorials
 ## Lesson 1: Using Quartz
 
 Before you can use the scheduler, it needs to be instantiated (who'd have guessed?). To do this, you use a
-SchedulerFactory. Some users of Quartz may keep an instance of a factory in a JNDI store, others may find it
+SchedulerFactory. Some users of Quartz may keep an instance of a factory in a JNDI store. Others may find it
 just as easy (or easier) to instantiate and use a factory instance directly (such as in the example below).
 
 Once a scheduler is instantiated, it can be started, placed in stand-by mode, and shutdown. Note that once a
 scheduler is shutdown, it cannot be restarted without being re-instantiated. Triggers do not fire (jobs do not execute)
 until the scheduler has been started, nor while it is in the paused state.
 
-Here's a quick snippet of code, that instantiates and starts a scheduler, and schedules a job for execution:
+Here's a quick snippet of code that instantiates and starts a scheduler and schedules a job for execution:
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
   SchedulerFactory schedFact = new org.quartz.impl.StdSchedulerFactory();
@@ -47,5 +47,5 @@ Here's a quick snippet of code, that instantiates and starts a scheduler, and sc
 
 
 As you can see, working with quartz is rather simple. In <a href="./tutorial-lesson-02.md"
-title="Tutorial Lesson 2">Lesson 2</a> we'll give a quick overview of Jobs and Triggers, and Quartz's API so that
+title="Tutorial Lesson 2">Lesson 2</a> we'll give a quick overview of Jobs, Triggers, and Quartz's API so that
 you can more fully understand this example.
