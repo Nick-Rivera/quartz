@@ -16,15 +16,15 @@ active_sub_menu_id: site_mnu_docs_tutorials
 The key interfaces of the Quartz API are:
 
 + Scheduler - the main API for interacting with the scheduler.
-+ Job - an interface to be implemented by components that you wish to have executed by the scheduler.
++ Job - an interface to be implemented by components that you want the scheduler to execute.
 + JobDetail - used to define instances of Jobs.
 + Trigger - a component that defines the schedule upon which a given Job will be executed.
 + JobBuilder - used to define/build JobDetail instances, which define instances of Jobs.
 + TriggerBuilder - used to define/build Trigger instances.
 
 
-A **Scheduler**'s life-cycle is bounded by it's creation, via a **SchedulerFactory** and
-a call to its *shutdown()* method.  Once created the Scheduler interface can be used add, remove, and list
+A **Scheduler**'s life-cycle is bounded by its creation, via a **SchedulerFactory** and
+a call to its *shutdown()* method.  Once created the Scheduler interface can be used to add, remove, and list
 Jobs and Triggers, and perform other scheduling-related operations (such as pausing a trigger).  However, the
 Scheduler will not actually act on any triggers (execute jobs) until it has been started with the *start()*
 method, as shown in <a href="tutorial-lesson-01.html" title="Go to Lesson 1">Lesson 1</a>.       
@@ -106,7 +106,7 @@ instance, and is discussed in further detail in the next lesson.
 
 *Trigger* objects are used to trigger the execution (or 'firing') of jobs. When you wish to
 schedule a job, you instantiate a trigger and 'tune' its properties to provide the scheduling you wish to have. Triggers
-may also have a JobDataMap associated with them - this is useful to passing parameters to a Job that are specific to the
+may also have a JobDataMap associated with them - this is useful for passing parameters to a Job that are specific to the
 firings of the trigger. Quartz ships with a handful of different trigger types, but the most commonly used types are
 SimpleTrigger and CronTrigger.
 
@@ -134,6 +134,6 @@ trigger must be unique within the group - or in other words, the complete key (o
 compound of the name and group.
 
 
-You now have a general idea about what Jobs and Triggers are, you can learn more about them in <a
+Now that you have a general idea about what Jobs and Triggers are, you can learn more about them in <a
     href="tutorial-lesson-03.html" title="Tutorial Lesson 3">Lesson 3: More About Jobs &amp; JobDetails</a> and <a
     href="tutorial-lesson-04.html" title="Tutorial Lesson 4">Lesson 4: More About Triggers</a>.
