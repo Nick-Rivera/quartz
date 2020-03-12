@@ -45,7 +45,7 @@ import static org.quartz.DateBuilder.*:
 </code></pre>
 
 
-Here are various examples of defining triggers with simple schedules, read through them all, as they each show
+Here are various examples of defining triggers with simple schedules. Read through them all, as they each show
 at least one new/different point:
 
 **Build a trigger for a specific moment in time, with no repeats:**
