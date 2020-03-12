@@ -15,7 +15,7 @@ active_sub_menu_id: site_mnu_docs_tutorials
 JobStore's are responsible for keeping track of all the "work data" that you give to the scheduler: jobs,
 triggers, calendars, etc. Selecting the appropriate JobStore for your Quartz scheduler instance is an important step.
 Luckily, the choice should be a very easy one once you understand the differences between them. You declare which
-JobStore your scheduler should use (and it's configuration settings) in the properties file (or object) that you provide
+JobStore your scheduler should use (and its configuration settings) in the properties file (or object) that you provide
 to the SchedulerFactory that you use to produce your scheduler instance.
 <blockquote>
         Never use a JobStore instance directly in your code. For some reason many people attempt to do this. The
@@ -47,11 +47,11 @@ There are no other settings you need to worry about.
 
 JDBCJobStore is also aptly named - it keeps all of its data in a database via JDBC. Because of this it is a bit
 more complicated to configure than RAMJobStore, and it also is not as fast. However, the performance draw-back is not
-terribly bad, especially if you build the database tables with indexes on the primary keys. On fairly modern set
+terribly bad, especially if you build the database tables with indexes on the primary keys. On a fairly modern set
 of machines with a decent LAN (between the scheduler and database) the time to retrieve and update a firing trigger
 will typically be less than 10 milliseconds.
 
-JDBCJobStore works with nearly any database, it has been used widely with Oracle, PostgreSQL, MySQL, MS SQLServer,
+JDBCJobStore works with nearly any database. It has been used widely with Oracle, PostgreSQL, MySQL, MS SQLServer,
 HSQLDB, and DB2. To use JDBCJobStore, you must first create a set of database tables for Quartz to use. You
 can find table-creation SQL scripts in the "docs/dbTables" directory of the Quartz distribution. If there is not already
 a script for your database type, just look at one of the existing ones, and modify it in any way necessary for your DB.
