@@ -28,7 +28,7 @@ Here is a listing of properties common to all trigger types:
 
 
 + The "jobKey" property indicates the identity of the job that should be executed when the trigger fires.
-+ The "startTime" property indicates when the trigger's schedule first comes into affect.  The value is a
++ The "startTime" property indicates when the trigger's schedule first comes into effect.  The value is a
 *java.util.Date* object that defines a moment in time on a given calendar date. For some trigger types, the
 trigger will actually fire at the start time, for others it simply marks the time that the schedule should start being
 followed.  This means you can store a trigger with a schedule such as "every 5th day of the month" during January,
@@ -42,7 +42,7 @@ Other properties, which take a bit more explanation are discussed in the followi
 
 ### [Priority](#TutorialLesson4-Priority)
 
-Sometimes, when you have many Triggers (or few worker threads in your Quartz thread pool), Quartz may not have
+Sometimes, when you have many Triggers (or a few worker threads in your Quartz thread pool), Quartz may not have
 enough resources to immediately fire all of the Triggers that are scheduled to fire at the same time. In this
 case, you may want to control which of your Triggers get first crack at the available Quartz worker threads. For
 this purpose, you can set the *priority* property on a Trigger. If N Triggers are to fire at the same time,
