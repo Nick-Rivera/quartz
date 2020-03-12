@@ -20,7 +20,7 @@ job, Quartz needs to be informed about various attributes that you may wish an i
 This is done via the JobDetail class, which was mentioned briefly in the previous section.
 
 JobDetail instances are built using the JobBuilder class.  You will typically want to use a static import of
-all of its methods, in order to have the DSL-feel within your code.
+all its methods to have the DSL-feel within your code.
 
 
 <pre class="prettyprint highlight"><code class="language-java" data-lang="java">
@@ -122,7 +122,7 @@ public class DumbJob implements Job {
 
 
 If you use a persistent JobStore (discussed in the JobStore section of this tutorial) you should use some care in
-deciding what you place in the JobDataMap, because the object in it will be serialized, and they therefore become prone
+deciding what you place in the JobDataMap because the object in it will be serialized, and they therefore become prone
 to class-versioning problems. Obviously standard Java types should be very safe, but beyond that, any time someone
 changes the definition of a class for which you have serialized instances, care has to be taken not to break
 compatibility.
