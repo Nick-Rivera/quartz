@@ -14,7 +14,7 @@ active_sub_menu_id: site_mnu_docs_tutorials
 CronTrigger is often more useful than SimpleTrigger, if you need a job-firing schedule that recurs based on
 calendar-like notions, rather than on the exactly specified intervals of SimpleTrigger.
 
-With CronTrigger, you can specify firing-schedules such as "every Friday at noon", or "every weekday and 9:30
+With CronTrigger, you can specify firing-schedules such as "every Friday at noon", or "every weekday at 9:30
 am", or even "every 5 minutes between 9:00 am and 10:00 am on every Monday, Wednesday and Friday during January".
 
 Even so, like SimpleTrigger, CronTrigger has a ***startTime*** which specifies when the schedule is in
@@ -211,7 +211,7 @@ When building CronTriggers, you specify the misfire instruction as part of the s
   trigger = newTrigger()
     .withIdentity("trigger3", "group1")
     .withSchedule(cronSchedule("0 0/2 8-17 * * ?")
-        ..withMisfireHandlingInstructionFireAndProceed())
+        .withMisfireHandlingInstructionFireAndProceed())
     .forJob("myJob", "group1")
     .build();
 </code></pre>
